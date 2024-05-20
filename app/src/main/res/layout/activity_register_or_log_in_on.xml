@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_OFF_Activity">
+
+    <LinearLayout
+        android:id="@+id/ContentLStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/Text_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="@font/outfit_regular"
+            android:text="@string/Status"
+            android:textColor="@color/grayDark"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/Text_OnlineOFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="@string/ONLINEStatus"
+            android:fontFamily="@font/outfit_regular"
+            android:textColor="@color/grayDark"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logoOnlyThat"
+        android:layout_width="253dp"
+        android:layout_height="253dp"
+        android:src="@drawable/light_logo_arrowb_wb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/nameLogo"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+    <LinearLayout
+        android:id="@+id/NameApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoOnlyThat"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_regular"
+            android:text="Fas"
+            android:textColor="@color/blueDark"
+            android:textSize="50sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="k"
+            android:fontFamily="@font/outfit_regular"
+            android:textSize="50sp"
+            android:textColor="@color/redLight"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:fontFamily="@font/outfit_regular"
+            android:textSize="50sp"
+            android:textColor="@color/blueDark"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConnectGoogle"
+        android:layout_width="213dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_rectangle_fillwhiteapp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="@string/ConnectGoogle"
+        android:textAllCaps="false"
+        android:textColor="@color/blueDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/NameApp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConnectFacebook"
+        android:layout_width="213dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_rectangle_fillwhiteapp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="@string/ConnectFacebook"
+        android:textAllCaps="false"
+        android:textColor="@color/blueDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnConnectGoogle"/>
+
+    <TextView
+        android:id="@+id/TxtFocusOn"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="o"
+        android:textAlignment="center"
+        android:textColor="@color/blueDark"
+        android:background="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/btnConnectFacebook"
+        />
+
+    <LinearLayout
+        android:layout_width="213dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/btnConnectFacebook"
+        app:layout_constraintBottom_toTopOf="@id/btnregisterON"
+        android:paddingVertical="9dp"
+        android:paddingHorizontal="18dp"
+        >
+        <TextView
+            android:layout_width="213dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/outfit_regular"
+            android:background="@color/blueDark"
+            />
+        <TextView
+            android:layout_width="213dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_height="1dp"
+            android:fontFamily="@font/outfit_regular"
+            android:background="@color/blueDark"
+            />
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnregisterON"
+        android:layout_width="213dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_rectangle_fillwhiteapp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="@string/Register"
+        android:textAllCaps="false"
+        android:textColor="@color/blueDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtFocusOn" />
+
+    <TextView
+        android:id="@+id/TxtTerms"
+        android:layout_width="175dp"
+        android:layout_height="26dp"
+        app:layout_constraintTop_toBottomOf="@id/btnregisterON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/TermsPhrase"
+        android:textSize="10sp"
+        android:textColor="@color/grayDark"
+        android:textAlignment="center"
+        android:fontFamily="@font/outfit_regular"
+        app:layout_constraintVertical_bias="0.2"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/TxtTerms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <TextView
+            android:id="@+id/TxtHaveAlready"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/HaveAccount"
+            android:textSize="10sp"
+            android:textColor="@color/grayDark"
+            android:textAlignment="center"
+            android:fontFamily="@font/outfit_regular"
+            app:layout_constraintVertical_bias="0.2"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/TxtBtnLogIn"
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:text="@string/LogIn"
+            android:textSize="10sp"
+            android:textColor="@color/grayLight"
+            android:textAllCaps="false"
+            android:background="@color/white"
+            android:fontFamily="@font/outfit_regular"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
