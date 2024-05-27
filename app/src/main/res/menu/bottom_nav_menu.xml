@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_calendar"
+        android:id="@+id/navigation_TimeLine"
         android:icon="@drawable/calendar_day"
         android:title="@string/title_TimeLine"
         android:background="@drawable/rounded_rectangle_fillwhiteapp"
         />
 
     <item
-        android:id="@+id/navigation_check"
+        android:id="@+id/navigation_Tasks"
         android:icon="@drawable/comment_check"
         android:title="@string/title_Tasks"
         android:background="@drawable/rounded_rectangle_fillwhiteapp"
@@ -17,20 +17,20 @@
         />
 
     <item
-        android:id="@+id/navigation_timer"
+        android:id="@+id/navigation_timerMenu"
         android:icon="@drawable/duration"
         android:background="@drawable/rounded_rectangle_fillwhiteapp"
         android:title="@string/title_TimerMenu"/>
 
     <item
-        android:id="@+id/navigation_edit"
+        android:id="@+id/navigation_notes"
         android:icon="@drawable/edit"
         android:title="@string/title_Notes"
         android:background="@drawable/rounded_rectangle_fillwhiteapp"
         />
 
     <item
-        android:id="@+id/navigation_profile"
+        android:id="@+id/navigation_Settings"
         android:icon="@drawable/admin_alt"
         android:background="@drawable/rounded_rectangle_fillwhiteapp"
         android:title="@string/title_settings" />

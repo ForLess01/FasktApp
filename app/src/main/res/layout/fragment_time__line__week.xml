@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Time_Line_Week">
+    tools:context=".TimeLineWeekFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -47,99 +47,99 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="01:00" />
+            android:text="@string/hr01" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="02:00" />
+            android:text="@string/hr02" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="03:00" />
+            android:text="@string/hr03" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="04:00" />
+            android:text="@string/hr04" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="05:00" />
+            android:text="@string/hr05" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="06:00" />
+            android:text="@string/hr06" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="07:00" />
+            android:text="@string/hr07" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="08:00" />
+            android:text="@string/hr08" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="09:00" />
+            android:text="@string/hr09" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10:00" />
+            android:text="@string/hr10" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="11:00" />
+            android:text="@string/hr11" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="12:00" />
+            android:text="@string/hr12" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="13:00" />
+            android:text="@string/hr13" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="14:00" />
+            android:text="@string/hr14" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="15:00" />
+            android:text="@string/hr15" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="16:00" />
+            android:text="@string/hr16" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="17:00" />
+            android:text="@string/hr17" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="18:00" />
+            android:text="@string/hr18" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="19:00" />
+            android:text="@string/hr19" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="20:00" />
+            android:text="@string/hr20" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="21:00" />
+            android:text="@string/hr21" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="22:00" />
+            android:text="@string/hr22" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="23:00" />
+            android:text="@string/hr23" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="00:00" />
+            android:text="@string/hr00" />
     </LinearLayout>
     <!-- Contenedor de dias -->
     <LinearLayout
@@ -593,7 +593,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/rounded_rectangle_fillwhiteapp">
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/Act1_Tuesday"
+                    android:id="@+id/Act1_Thursday"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:textSize="11sp"

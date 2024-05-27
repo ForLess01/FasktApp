@@ -10,4 +10,27 @@
         android:name="com.alfontetarqui.fasktapp.TimeLine_Main_Activity"
         android:label="activity_time_line_main"
         tools:layout="@layout/activity_time_line_main" />
+    <fragment
+        android:id="@+id/notesMainFragment"
+        android:name="com.alfontetarqui.fasktapp.NotesMainFragment"
+        android:label="fragment_notes_main"
+        tools:layout="@layout/fragment_notes_main" />
+    <fragment
+        android:id="@+id/tasksMainFragment"
+        android:name="com.alfontetarqui.fasktapp.TasksMainFragment"
+        android:label="fragment_tasks_main"
+        tools:layout="@layout/fragment_tasks_main" >
+        <action
+            android:id="@+id/action_tasksMainFragment_to_timerMenuMainsFragment"
+            app:destination="@id/timerMenuMainsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timerMenuMainsFragment"
+        android:name="com.alfontetarqui.fasktapp.TimerMenuMainsFragment"
+        android:label="fragment_timer_menu_mains"
+        tools:layout="@layout/fragment_timer_menu_mains" >
+        <action
+            android:id="@+id/action_timerMenuMainsFragment_to_notesMainFragment"
+            app:destination="@id/notesMainFragment" />
+    </fragment>
 </navigation>

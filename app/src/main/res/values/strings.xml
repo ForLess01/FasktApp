@@ -11,6 +11,7 @@
     <string name="AgeUser">"Age"</string>
     <string name="AcademicGroup">"Academic"</string>
     <string name="FitGroup">"Fit"</string>
+    <string name="EatGroup">"Eat"</string>
     <string name="Individual">"Individual"</string>
     <string name="signInUp">"Sign in up"</string>
     <string name="terms">"Terms"</string>
@@ -47,5 +48,28 @@
     <string name="Saturday">Saturday</string>
     <string name="Sunday">Sunday</string>
     <string name="Task1">Task01</string>
-    <string name="nbr01">01</string>
+    <string name="hr01">01:00</string>
+    <string name="hr02">02:00</string>
+    <string name="hr03">03:00</string>
+    <string name="hr04">04:00</string>
+    <string name="hr05">05:00</string>
+    <string name="hr06">06:00</string>
+    <string name="hr07">07:00</string>
+    <string name="hr08">08:00</string>
+    <string name="hr09">09:00</string>
+    <string name="hr10">10:00</string>
+    <string name="hr11">11:00</string>
+    <string name="hr12">12:00</string>
+    <string name="hr13">13:00</string>
+    <string name="hr14">14:00</string>
+    <string name="hr15">15:00</string>
+    <string name="hr16">16:00</string>
+    <string name="hr17">17:00</string>
+    <string name="hr18">18:00</string>
+    <string name="hr19">19:00</string>
+    <string name="hr20">20:00</string>
+    <string name="hr21">21:00</string>
+    <string name="hr22">22:00</string>
+    <string name="hr23">23:00</string>
+    <string name="hr00">00:00</string>
 </resources>

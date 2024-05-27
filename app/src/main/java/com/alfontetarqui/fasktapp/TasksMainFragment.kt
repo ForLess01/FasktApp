@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Time_Line_Week.newInstance] factory method to
+ * Use the [TasksMainFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Time_Line_Week : Fragment() {
+class TasksMainFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class Time_Line_Week : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_time__line__week, container, false)
+        return inflater.inflate(R.layout.fragment_tasks_main, container, false)
     }
 
     companion object {
@@ -44,12 +44,12 @@ class Time_Line_Week : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Time_Line_Week.
+         * @return A new instance of fragment TasksMainFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Time_Line_Week().apply {
+            TasksMainFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
