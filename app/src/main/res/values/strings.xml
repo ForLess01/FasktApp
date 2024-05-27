@@ -35,4 +35,17 @@
     <string name="title_TimeLine">TimeLine</string>
     <string name="title_TimerMenu">TimerMenu</string>
     <string name="title_Notes">Notes</string>
+    <string name="timeline_for_main">TimeLine  :</string>
+    <string name="week_timeline">Week</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Monday">Monday</string>
+    <string name="Tuesday">Tuesday</string>
+    <string name="Wednesday">Wednesday</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+    <string name="Task1">Task01</string>
+    <string name="nbr01">01</string>
 </resources>

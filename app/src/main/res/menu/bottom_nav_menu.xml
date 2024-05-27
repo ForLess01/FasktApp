@@ -5,27 +5,34 @@
         android:id="@+id/navigation_calendar"
         android:icon="@drawable/calendar_day"
         android:title="@string/title_TimeLine"
+        android:background="@drawable/rounded_rectangle_fillwhiteapp"
         />
 
     <item
         android:id="@+id/navigation_check"
         android:icon="@drawable/comment_check"
         android:title="@string/title_Tasks"
+        android:background="@drawable/rounded_rectangle_fillwhiteapp"
+
         />
 
     <item
         android:id="@+id/navigation_timer"
         android:icon="@drawable/duration"
+        android:background="@drawable/rounded_rectangle_fillwhiteapp"
         android:title="@string/title_TimerMenu"/>
 
     <item
         android:id="@+id/navigation_edit"
         android:icon="@drawable/edit"
-        android:title="@string/title_Notes"/>
+        android:title="@string/title_Notes"
+        android:background="@drawable/rounded_rectangle_fillwhiteapp"
+        />
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/admin_alt"
+        android:background="@drawable/rounded_rectangle_fillwhiteapp"
         android:title="@string/title_settings" />
 
 </menu>
