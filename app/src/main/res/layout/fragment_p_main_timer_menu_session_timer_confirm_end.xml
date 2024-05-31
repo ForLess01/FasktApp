@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PMainTimerMenuSessionTimerConfirmEndFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="280dp"
+            android:layout_height="180dp"
+            android:background="@drawable/rounded_rectangle_fillwhiteapp"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/TitlePMainTimerMenuTimeControllerStartFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_regular"
+                android:text="Session Timer"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/EdtTxtActivityNamePMainTimerMenuTimeControllerStartFragment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp"
+                android:autofillHints="2"
+                android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:fontFamily="@font/outfit_regular"
+                android:hint="2"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/EdtTxtActivityNamePMainTimerMenuTimeControllerStartFragment"
+                android:layout_width="260dp"
+                android:layout_height="48dp"
+                android:autofillHints="Studying Math"
+                android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:fontFamily="@font/outfit_regular"
+                android:hint="Activity Name"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/RemainingBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TitlePMainTimerMenuTimeControllerStartFragment"
+                tools:layout_editor_absoluteY="4dp" />
+            <LinearLayout
+                android:id="@+id/RemainingBox"
+                android:layout_width="260dp"
+                android:layout_height="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/EdtTxtActivityNamePMainTimerMenuTimeControllerStartFragment"
+                app:layout_constraintBottom_toTopOf="@id/ContainerButtons"
+                >
+                <TextView
+                    android:id="@+id/TxTRemaining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="Remaining: "
+                    android:textColor="@color/blueDark"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteY="4dp"
+                    />
+                <EditText
+                    android:id="@+id/EdtTxtFocusTimePMainTimerMenuTimeControllerStartFragment"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:autofillHints="Studying Math"
+                    android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                    android:fontFamily="@font/outfit_regular"
+                    android:hint="00:23"
+                    android:inputType="time|number"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteY="4dp" />
+
+                <EditText
+                    android:id="@+id/EdtTxtBreakTimePMainTimerMenuTimeControllerStartFragment"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:autofillHints="Studying Math"
+                    android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                    android:fontFamily="@font/outfit_regular"
+                    android:hint="2"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@id/ContainerButtons"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/EdtTxtFocusTimePMainTimerMenuTimeControllerStartFragment"
+                    app:layout_constraintTop_toBottomOf="@id/EdtTxtActivityNamePMainTimerMenuTimeControllerStartFragment"
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ContainerButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/RemainingBox">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/BtnResumePMainTimerMenuTimeControllerStartFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnrectanglebluedark"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="Resume"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/BtnEndPMainTimerMenuTimeControllerStartFragment"
+                    android:layout_width="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnrectanglebluedark"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="End"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

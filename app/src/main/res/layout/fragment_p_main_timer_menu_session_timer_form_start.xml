@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PMainTimerMenuSessionTimerFormStartFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="280dp"
+            android:layout_height="180dp"
+            android:background="@drawable/rounded_rectangle_fillwhiteapp"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/TitlePMainTimerMenuTimeControllerStartFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_regular"
+                android:text="Session Timer"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/EdtTxtActivityNamePMainTimerMenuTimeControllerStartFragment" />
+
+            <EditText
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:autofillHints="2"
+                android:hint="2"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/outfit_regular"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/EdtTxtActivityNamePMainTimerMenuTimeControllerStartFragment"
+                android:layout_width="260dp"
+                android:layout_height="35dp"
+                android:autofillHints="Studying Math"
+                android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:hint="Activity Name"
+                android:fontFamily="@font/outfit_regular"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@id/EdtTxtFocusTimePMainTimerMenuTimeControllerStartFragment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TitlePMainTimerMenuTimeControllerStartFragment"
+                tools:layout_editor_absoluteY="4dp" />
+            <EditText
+                android:id="@+id/EdtTxtFocusTimePMainTimerMenuTimeControllerStartFragment"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:autofillHints="Studying Math"
+                android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:hint="Focus Time"
+                android:fontFamily="@font/outfit_regular"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@id/ContainerButtons"
+                app:layout_constraintEnd_toStartOf="@id/EdtTxtBreakTimePMainTimerMenuTimeControllerStartFragment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/EdtTxtActivityNamePMainTimerMenuTimeControllerStartFragment"
+                tools:layout_editor_absoluteY="4dp" />
+            <EditText
+                android:id="@+id/EdtTxtBreakTimePMainTimerMenuTimeControllerStartFragment"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:autofillHints="Studying Math"
+                android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:hint="Break Time"
+                android:fontFamily="@font/outfit_regular"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@id/ContainerButtons"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/EdtTxtFocusTimePMainTimerMenuTimeControllerStartFragment"
+                app:layout_constraintTop_toBottomOf="@id/EdtTxtActivityNamePMainTimerMenuTimeControllerStartFragment"
+                tools:layout_editor_absoluteY="4dp" />
+
+            <LinearLayout
+                android:id="@+id/ContainerButtons"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="15dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/BtnGoPMainTimerMenuTimeControllerStartFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnrectanglebluedark"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="Go"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    />
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

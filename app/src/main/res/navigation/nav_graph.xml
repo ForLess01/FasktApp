@@ -18,6 +18,12 @@
         <action
             android:id="@+id/action_notesMainFragment_to_notesFragment"
             app:destination="@id/notesFragment" />
+        <action
+            android:id="@+id/action_notesMainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_notesMainFragment_to_PMainNotesInGroupFragment"
+            app:destination="@id/PMainNotesInGroupFragment" />
     </fragment>
     <fragment
         android:id="@+id/tasksMainFragment"
@@ -42,4 +48,23 @@
         android:name="com.alfontetarqui.fasktapp.NotesFragment"
         android:label="fragment_notes"
         tools:layout="@layout/fragment_notes" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.alfontetarqui.fasktapp.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/PMainNotesInGroupFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainNotesInGroupFragment"
+        android:label="fragment_p_main_notes_in_group"
+        tools:layout="@layout/fragment_p_main_notes_in_group" />
+    <fragment
+        android:id="@+id/timeLineWeekFragment"
+        android:name="com.alfontetarqui.fasktapp.TimeLineWeekFragment"
+        android:label="fragment_time__line__week"
+        tools:layout="@layout/fragment_time__line__week" >
+        <action
+            android:id="@+id/action_timeLineWeekFragment_to_tasksMainFragment"
+            app:destination="@id/tasksMainFragment" />
+    </fragment>
 </navigation>

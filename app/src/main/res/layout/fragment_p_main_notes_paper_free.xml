@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotesFragment">
+    tools:context=".PMainNotesPaperFreeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/TopTitleAndClock"
@@ -27,11 +27,11 @@
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/BtnSaveNotes"
-            android:src="@drawable/badge_check"
             android:layout_width="55dp"
             android:layout_height="47dp"
             android:background="@drawable/rounded_rectangle_fillwhiteapp"
             android:fontFamily="@font/outfit_regular"
+            android:src="@drawable/badge_check"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -72,8 +72,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_rectangle_fillwhite_r15"
             android:fontFamily="@font/outfit_regular"
-            android:text="Math"
-            android:textSize="20sp"
+            android:text="Mon | May 30"
+            android:textSize="12sp"
             android:layout_marginStart="20dp"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
