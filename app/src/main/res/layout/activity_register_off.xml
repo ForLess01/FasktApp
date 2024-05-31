@@ -64,10 +64,12 @@
         app:layout_constraintTop_toBottomOf="@id/logoOnlyThat"
         />
     <EditText
+        android:inputType="textPersonName"
         android:id="@+id/UserRegisterNameBoxTxt"
         android:layout_width="213dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:hint="@string/NameUser"
+        android:autofillHints="Rendo"
         android:textAlignment="center"
         android:fontFamily="@font/outfit_regular"
         android:textSize="20sp"
@@ -79,12 +81,14 @@
         />
 
     <EditText
+        android:inputType="number"
         android:id="@+id/UserRegisterAgeBoxTxt"
-        android:layout_width="120dp"
-        android:layout_height="41dp"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
         android:background="@drawable/rounded_rectangle_fillwhiteapp"
         android:fontFamily="@font/outfit_regular"
         android:hint="@string/AgeUser"
+        android:autofillHints="20"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,12 +114,13 @@
     <LinearLayout
         android:id="@+id/AcademicIndividualContentBox"
         android:layout_width="213dp"
-        android:layout_height="27dp"
+        android:layout_height="30dp"
         android:layout_marginTop="7dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TxtFocusOn">
-        <EditText
+        <androidx.appcompat.widget.AppCompatButton
+            android:autofillHints="Student"
             android:id="@+id/UserRegisterTypeBoxTxt"
             android:layout_width="213dp"
             android:layout_height="match_parent"
@@ -123,11 +128,12 @@
             android:layout_marginEnd="10dp"
             android:background="@drawable/rounded_rectangle_fillwhiteapp"
             android:fontFamily="@font/outfit_regular"
-            android:hint="@string/AcademicGroup"
+            android:text="@string/Academic"
+            android:textAllCaps="false"
             android:textAlignment="center"
-            android:textSize="10sp"
+            android:textSize="11sp"
             />
-        <EditText
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/UserRegisterIndividualBoxTxt"
             android:layout_width="213dp"
             android:layout_height="match_parent"
@@ -135,15 +141,16 @@
             android:layout_marginStart="10dp"
             android:background="@drawable/rounded_rectangle_fillwhiteapp"
             android:fontFamily="@font/outfit_regular"
-            android:hint="@string/Individual"
+            android:text="@string/Individual"
+            android:textAllCaps="false"
             android:textAlignment="center"
-            android:textSize="10sp"
+            android:textSize="11sp"
             />
     </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnregisterOFF"
+        android:id="@+id/btnregisterOFFLINE"
         android:layout_width="213dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/outfit_regular"
         app:layout_constraintTop_toBottomOf="@id/AcademicIndividualContentBox"
@@ -158,12 +165,12 @@
     <TextView
         android:layout_width="175dp"
         android:layout_height="26dp"
-        app:layout_constraintTop_toBottomOf="@id/btnregisterOFF"
+        app:layout_constraintTop_toBottomOf="@id/btnregisterOFFLINE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="@string/TermsPhrase"
-        android:textSize="10sp"
+        android:textSize="11sp"
         android:textAlignment="center"
         android:fontFamily="@font/outfit_regular"
         app:layout_constraintVertical_bias="0.2"

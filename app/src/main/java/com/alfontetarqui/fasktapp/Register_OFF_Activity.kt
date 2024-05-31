@@ -13,7 +13,7 @@ class Register_OFF_Activity : AppCompatActivity() {
         binding = ActivityRegisterOffBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnregisterOFF.setOnClickListener { WelcomeBtnRegister() }
+        binding.btnregisterOFFLINE.setOnClickListener { WelcomeBtnRegister() }
     }
 
     private fun WelcomeBtnRegister(){
