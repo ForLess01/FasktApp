@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_notesMainFragment_to_PMainNotesInGroupFragment"
             app:destination="@id/PMainNotesInGroupFragment" />
+        <action
+            android:id="@+id/action_notesMainFragment_to_PMainNotesPaperFreeFragment"
+            app:destination="@id/PMainNotesPaperFreeFragment" />
     </fragment>
     <fragment
         android:id="@+id/tasksMainFragment"
@@ -33,6 +36,9 @@
         <action
             android:id="@+id/action_tasksMainFragment_to_timerMenuMainsFragment"
             app:destination="@id/timerMenuMainsFragment" />
+        <action
+            android:id="@+id/action_tasksMainFragment_to_PMainTasksCreateFormFragment"
+            app:destination="@id/PMainTasksCreateFormFragment" />
     </fragment>
     <fragment
         android:id="@+id/timerMenuMainsFragment"
@@ -42,6 +48,12 @@
         <action
             android:id="@+id/action_timerMenuMainsFragment_to_notesMainFragment"
             app:destination="@id/notesMainFragment" />
+        <action
+            android:id="@+id/action_timerMenuMainsFragment_to_PMainTimerMenuTimeControllerStartFragment"
+            app:destination="@id/PMainTimerMenuTimeControllerStartFragment" />
+        <action
+            android:id="@+id/action_timerMenuMainsFragment_to_PMainTimerMenuSessionTimerFormStartFragment"
+            app:destination="@id/PMainTimerMenuSessionTimerFormStartFragment" />
     </fragment>
     <fragment
         android:id="@+id/notesFragment"
@@ -66,5 +78,76 @@
         <action
             android:id="@+id/action_timeLineWeekFragment_to_tasksMainFragment"
             app:destination="@id/tasksMainFragment" />
+        <action
+            android:id="@+id/action_timeLineWeekFragment_to_PMainTimeLineAcademicFormFragment"
+            app:destination="@id/PMainTimeLineAcademicFormFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/PMainTimerMenuTimeControllerStartFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainTimerMenuTimeControllerStartFragment"
+        android:label="fragment_p_main_timer_menu_time_controller_start"
+        tools:layout="@layout/fragment_p_main_timer_menu_time_controller_start" >
+        <action
+            android:id="@+id/action_PMainTimerMenuTimeControllerStartFragment_to_PMainTimerMenuTimeControllerEndGoodFragment"
+            app:destination="@id/PMainTimerMenuTimeControllerEndGoodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PMainNotesPaperFreeFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainNotesPaperFreeFragment"
+        android:label="fragment_p_main_notes_paper_free"
+        tools:layout="@layout/fragment_p_main_notes_paper_free" />
+    <fragment
+        android:id="@+id/PMainTasksCreateFormFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainTasksCreateFormFragment"
+        android:label="fragment_p_main_tasks_create_form"
+        tools:layout="@layout/fragment_p_main_tasks_create_form" />
+    <fragment
+        android:id="@+id/PMainTimeLineAcademicFormFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainTimeLineAcademicFormFragment"
+        android:label="fragment_p_main_time_line_academic_form"
+        tools:layout="@layout/fragment_p_main_time_line_academic_form" />
+    <fragment
+        android:id="@+id/PMainTimerMenuSessionTimerConfirmEndFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainTimerMenuSessionTimerConfirmEndFragment"
+        android:label="fragment_p_main_timer_menu_session_timer_confirm_end"
+        tools:layout="@layout/fragment_p_main_timer_menu_session_timer_confirm_end" >
+        <action
+            android:id="@+id/action_PMainTimerMenuSessionTimerConfirmEndFragment_to_PMainTimerMenuTimeControllerEndBadFragment"
+            app:destination="@id/PMainTimerMenuTimeControllerEndBadFragment" />
+        <action
+            android:id="@+id/action_PMainTimerMenuSessionTimerConfirmEndFragment_to_PMainTimerMenuTimeControllerEndConfirmFragment"
+            app:destination="@id/PMainTimerMenuTimeControllerEndConfirmFragment" />
+        <action
+            android:id="@+id/action_PMainTimerMenuSessionTimerConfirmEndFragment_to_PMainTimerMenuTimeControllerEndFragment"
+            app:destination="@id/PMainTimerMenuTimeControllerEndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PMainTimerMenuTimeControllerEndFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainTimerMenuTimeControllerEndFragment"
+        android:label="fragment_p_main_timer_menu_time_controller_end"
+        tools:layout="@layout/fragment_p_main_timer_menu_time_controller_end" />
+    <fragment
+        android:id="@+id/PMainTimerMenuSessionTimerFormStartFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainTimerMenuSessionTimerFormStartFragment"
+        android:label="fragment_p_main_timer_menu_session_timer_form_start"
+        tools:layout="@layout/fragment_p_main_timer_menu_session_timer_form_start" >
+        <action
+            android:id="@+id/action_PMainTimerMenuSessionTimerFormStartFragment_to_PMainTimerMenuSessionTimerConfirmEndFragment"
+            app:destination="@id/PMainTimerMenuSessionTimerConfirmEndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PMainTimerMenuTimeControllerEndBadFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainTimerMenuTimeControllerEndBadFragment"
+        android:label="fragment_p_main_timer_menu_time_controller_end_bad"
+        tools:layout="@layout/fragment_p_main_timer_menu_time_controller_end_bad" />
+    <fragment
+        android:id="@+id/PMainTimerMenuTimeControllerEndConfirmFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainTimerMenuTimeControllerEndConfirmFragment"
+        android:label="fragment_p_main_timer_menu_time_controller_end_confirm"
+        tools:layout="@layout/fragment_p_main_timer_menu_time_controller_end_confirm" />
+    <fragment
+        android:id="@+id/PMainTimerMenuTimeControllerEndGoodFragment"
+        android:name="com.alfontetarqui.fasktapp.PMainTimerMenuTimeControllerEndGoodFragment"
+        android:label="fragment_p_main_timer_menu_time_controller_end_good"
+        tools:layout="@layout/fragment_p_main_timer_menu_time_controller_end_good" />
 </navigation>

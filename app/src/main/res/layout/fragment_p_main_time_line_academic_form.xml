@@ -203,6 +203,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Note"
+                android:textAllCaps="false"
                 android:fontFamily="@font/outfit_regular"
                 android:textSize="15sp"
                 android:background="@drawable/rounded_rectangle_fillwhiteapp"
