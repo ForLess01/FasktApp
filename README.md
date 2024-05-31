@@ -1,6 +1,3 @@
-Claro, aquí tienes el archivo `README.md` actualizado para incluir las secciones de Figma y Excalidraw:
-
----
 
 # FaskT
 
@@ -83,7 +80,7 @@ Puedes ver el prototipo completo del diseño de la aplicación en Figma en el si
 
 Los diagramas y bocetos del flujo de trabajo y la arquitectura de la aplicación están disponibles en Excalidraw. Puedes consultarlos en el siguiente enlace:
 
-[Diagramas de FaskT en Excalidraw]([https://www.excalidraw.com/file/tu-enlace](https://excalidraw.com/#json=1NJy3wuqGAwoBbH7WJBA9,VGGwCDmsTcwGPebttIJOBw))
+[Diagramas de FaskT en Excalidraw](https://www.excalidraw.com/file/tu-enlace](https://excalidraw.com/#json=1NJy3wuqGAwoBbH7WJBA9,VGGwCDmsTcwGPebttIJOBw )
 
 ## Instalación
 
