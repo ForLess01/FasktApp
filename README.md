@@ -80,7 +80,7 @@ Puedes ver el prototipo completo del diseño de la aplicación en Figma en el si
 
 [Prototipo de FaskT en Figma](https://www.figma.com/design/FUv7bah0ZSJ4d5LkM0SVXq/FaskT?node-id=0-1&t=Td4QEBqCsztTt3TG-1)
 ## Diagramas de Excalidraw
-![FaskT Logo](./image.png)
+![FaskT Logo](./excalidrawPrototype.png)
 
 Los diagramas y bocetos del flujo de trabajo y la arquitectura de la aplicación están disponibles en Excalidraw. Puedes consultarlos en el siguiente enlace:
 
