@@ -10,6 +10,7 @@
     <string name="NameUser">"Name"</string>
     <string name="AgeUser">"Age"</string>
     <string name="AcademicGroup">"Academic"</string>
+    <string name="UserNameMe">"Rendo Alfonte"</string>
     <string name="FitGroup">"Fit"</string>
     <string name="EatGroup">"Eat"</string>
     <string name="Individual">"Individual"</string>

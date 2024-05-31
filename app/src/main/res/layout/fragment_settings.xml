@@ -32,7 +32,7 @@
             android:layout_height="35dp"
             android:background="@drawable/rounded_rectangle_fillwhiteapp"
             android:fontFamily="@font/outfit_regular"
-            android:hint="@string/hr01"
+            android:text="@string/hr01"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -54,16 +54,97 @@
             />
 
         <TextView
+            android:id="@+id/TxtUserNAme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/outfit_regular"
-            android:text="Rendo Alfonte"
+            android:text="@string/UserNameMe"
             android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/BtnTypeConnectionToApp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ProfilePhotoSettings"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BtnTypeConnectionToApp"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/outfit_regular"
+            android:text="@string/OFFLINEStatus"
+            android:textColor="@color/grayDark"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ProfilePhotoSettings"
+            app:layout_constraintTop_toBottomOf="@id/TxtUserNAme" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="250dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSettingEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/outfit_regular"
+            android:paddingStart="20dp"
+            android:text="EditProfile"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSettingTheme"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/outfit_regular"
+            android:paddingStart="20dp"
+            android:text="Theme"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSettingEditProfile" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSettingSupport"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/outfit_regular"
+            android:paddingStart="20dp"
+            android:text="Support"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSettingTheme" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSettingReport"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/outfit_regular"
+            android:paddingStart="20dp"
+            android:text="Report"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSettingSupport" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

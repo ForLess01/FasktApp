@@ -32,7 +32,7 @@
             android:layout_height="35dp"
             android:background="@drawable/rounded_rectangle_fillwhiteapp"
             android:fontFamily="@font/outfit_regular"
-            android:hint="@string/hr01"
+            android:text="@string/hr01"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -92,7 +92,7 @@
                     android:text="Math"
                     android:textAllCaps="false"
                     android:textColor="@color/blueDark"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:layout_constraintHorizontal_chainStyle="spread_inside"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/appCompatButton2"/>
@@ -106,7 +106,7 @@
                     android:text="Math"
                     android:textAllCaps="false"
                     android:textColor="@color/blueDark"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/appCompatButton1"/>
 
@@ -149,7 +149,7 @@
                     android:text="Math"
                     android:textAllCaps="false"
                     android:textColor="@color/blueDark"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:layout_constraintHorizontal_chainStyle="spread_inside"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/fitButtonGroups2"/>
@@ -220,7 +220,7 @@
                     android:text="Math"
                     android:textAllCaps="false"
                     android:textColor="@color/blueDark"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/EatButtonGroups1"/>
 
@@ -262,6 +262,7 @@
                 android:textAllCaps="false"
                 android:textAlignment="textStart"
                 android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:background="@color/white"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/VisibleMainTaskView2"
@@ -276,6 +277,7 @@
                 android:textAllCaps="false"
                 android:textAlignment="textStart"
                 android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:background="@color/white"
                 app:layout_constraintTop_toBottomOf="@id/VisibleMainTaskView1"
                 android:fontFamily="@font/outfit_regular"
@@ -289,6 +291,7 @@
                 android:text="I need find some lorem"
                 android:textAllCaps="false"
                 android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:textAlignment="textStart"
                 android:background="@color/white"
                 app:layout_constraintTop_toBottomOf="@id/VisibleMainTaskView2"
@@ -303,6 +306,7 @@
                 android:text="I need find some lorem"
                 android:textAllCaps="false"
                 android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:textAlignment="textStart"
                 android:background="@color/white"
                 app:layout_constraintTop_toBottomOf="@id/VisibleMainTaskView3"
