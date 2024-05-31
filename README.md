@@ -75,7 +75,7 @@ Las siguientes son algunas de las pantallas clave de la aplicación:
 - Vista de TimeLine y Tasks
 
 ## Prototipado en Figma
-![FaskT Logo](./image.jpg)
+![FaskT Logo](./image.png)
 Puedes ver el prototipo completo del diseño de la aplicación en Figma en el siguiente enlace:
 
 [Prototipo de FaskT en Figma](https://www.figma.com/design/FUv7bah0ZSJ4d5LkM0SVXq/FaskT?node-id=0-1&t=Td4QEBqCsztTt3TG-1)
