@@ -14,7 +14,11 @@
         android:id="@+id/notesMainFragment"
         android:name="com.alfontetarqui.fasktapp.NotesMainFragment"
         android:label="fragment_notes_main"
-        tools:layout="@layout/fragment_notes_main" />
+        tools:layout="@layout/fragment_notes_main" >
+        <action
+            android:id="@+id/action_notesMainFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/tasksMainFragment"
         android:name="com.alfontetarqui.fasktapp.TasksMainFragment"
@@ -33,4 +37,9 @@
             android:id="@+id/action_timerMenuMainsFragment_to_notesMainFragment"
             app:destination="@id/notesMainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.alfontetarqui.fasktapp.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes" />
 </navigation>

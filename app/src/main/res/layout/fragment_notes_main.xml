@@ -258,7 +258,7 @@
                 android:id="@+id/VisibleMainTaskView1"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="I need find some lorem"
+                android:text="PLEASE TOUCH THIS BUTTON TO TRY TO TYPE"
                 android:textAllCaps="false"
                 android:textAlignment="textStart"
                 android:paddingStart="10dp"
