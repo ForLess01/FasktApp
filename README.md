@@ -90,7 +90,7 @@ Los diagramas y bocetos del flujo de trabajo y la arquitectura de la aplicación
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tuusuario/FaskT.git
+    git clone https://github.com/ForLess01/FaskT.git
     ```
 
 2. Navega al directorio del proyecto:
