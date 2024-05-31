@@ -2,7 +2,7 @@
 # FaskT
 
 **Fecha:** 05/05/2024  
-**Autor:** Alfonte Tarqui Rendo  
+**Autor:** Alfonte Rendo  
 
 ## Descripción
 
