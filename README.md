@@ -1,7 +1,7 @@
 
 # FaskT
 
-![FaskT Logo](app/src/main/res/drawable/light_logo_arrowb_wb.png)
+<img src="app/src/main/res/drawable/light_logo_arrowb_wb.png" alt="Descripción de la imagen" style="width:300px;"/>
 **Fecha:** 05/05/2024  
 **Autor:** Alfonte Rendo  
 
