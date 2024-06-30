@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "678307917636",
+    "project_id": "faskt-44cf4",
+    "storage_bucket": "faskt-44cf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678307917636:android:06e345f93ea9fbc9d37111",
+        "android_client_info": {
+          "package_name": "com.alfontetarqui.fasktapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmu24wKD_vE2J0sNqdHUDnbqbxXI1PfKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,9 @@
 package com.alfontetarqui.fasktapp
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -27,5 +30,20 @@ class MainActivity : AppCompatActivity() {
             // Finalizar la ActivityA (opcional)
             finish()
         }
+
+        checkInternetConnection()
     }
+    private fun checkInternetConnection() {
+        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val network = connectivityManager.activeNetwork
+        val networkCapabilities = connectivityManager.getNetworkCapabilities(network)
+        val isConnected = networkCapabilities?.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) == true
+
+        if (isConnected) {
+            binding.TextOnlineOFF.text = "ONLINE"
+        } else {
+            binding.TextOnlineOFF.text = "OFFLINE"
+        }
+    }
+
 }
