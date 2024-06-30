@@ -20,17 +20,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        lifecycleScope.launch {
-            // Esperar 4 segundos
-            delay(3000)
-            // Crear el Intent para la ActivityB
-            val intent = Intent(this@MainActivity, Register_OFF_Activity::class.java)
-            // Iniciar la ActivityB
-            startActivity(intent)
-            // Finalizar la ActivityA (opcional)
-            finish()
-        }
-
         checkInternetConnection()
     }
     private fun checkInternetConnection() {
@@ -41,8 +30,28 @@ class MainActivity : AppCompatActivity() {
 
         if (isConnected) {
             binding.TextOnlineOFF.text = "ONLINE"
+            lifecycleScope.launch {
+                // Esperar 4 segundos
+                delay(3000)
+                // Crear el Intent para la ActivityB
+                val intent = Intent(this@MainActivity, RegisterOrLogInON_Activity::class.java)
+                // Iniciar la ActivityB
+                startActivity(intent)
+                // Finalizar la ActivityA (opcional)
+                finish()
+            }
         } else {
             binding.TextOnlineOFF.text = "OFFLINE"
+            lifecycleScope.launch {
+                // Esperar 4 segundos
+                delay(3000)
+                // Crear el Intent para la ActivityB
+                val intent = Intent(this@MainActivity, Register_OFF_Activity::class.java)
+                // Iniciar la ActivityB
+                startActivity(intent)
+                // Finalizar la ActivityA (opcional)
+                finish()
+            }
         }
     }
 
