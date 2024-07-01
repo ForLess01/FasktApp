@@ -20,17 +20,16 @@ class RegisterOrLogInON_Activity : AppCompatActivity() {
         binding = ActivityRegisterOrLogInOnBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnregisterON.setOnClickListener {registerONLINE()}
-
-        // Aplica los WindowInsets usando View Binding
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        binding.TxtBtnLogIn.setOnClickListener {LoginWithEmail()}
     }
 
     private fun registerONLINE(){
         val intent = Intent(this@RegisterOrLogInON_Activity,Register_ON_Activity::class.java)
+        startActivity(intent)
+        finish()
+    }
+    private fun LoginWithEmail(){
+        val intent = Intent(this@RegisterOrLogInON_Activity,LoginON_Activity::class.java)
         startActivity(intent)
         finish()
     }

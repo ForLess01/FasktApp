@@ -107,7 +107,7 @@
     </LinearLayout>
     <EditText
         android:id="@+id/UserRegisterEmailBoxTxt"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:layout_width="213dp"
         android:layout_height="48dp"
         android:hint="@string/prompt_email"
@@ -123,7 +123,7 @@
         />
     <EditText
         android:id="@+id/UserRegisterPasswordBoxTxt"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:layout_width="213dp"
         android:layout_height="48dp"
         android:hint="@string/prompt_password"
@@ -151,7 +151,7 @@
         android:textSize="11sp"
         android:textAlignment="center"
         android:fontFamily="@font/outfit_regular"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintVertical_bias="0.2"
         />
 
@@ -159,7 +159,7 @@
         android:id="@+id/btnregisterOFFLINE"
         android:layout_width="213dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/outfit_regular"
         app:layout_constraintTop_toBottomOf="@id/TermsPhrase"
         app:layout_constraintStart_toStartOf="parent"

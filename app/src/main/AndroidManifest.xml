@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FasktApp"
         tools:targetApi="31">
         <activity
+            android:name=".LoginON_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Validation_Email_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Register_ON_Activity"
             android:exported="false" />
         <activity

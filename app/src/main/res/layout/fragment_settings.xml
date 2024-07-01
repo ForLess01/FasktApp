@@ -54,7 +54,7 @@
             />
 
         <TextView
-            android:id="@+id/TxtUserNAme"
+            android:id="@+id/TxtUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/outfit_regular"
@@ -71,12 +71,12 @@
             android:layout_height="40dp"
             android:background="@color/transparent"
             android:fontFamily="@font/outfit_regular"
-            android:text="@string/OFFLINEStatus"
+            android:text="@string/TypeLogin"
             android:textColor="@color/grayDark"
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ProfilePhotoSettings"
-            app:layout_constraintTop_toBottomOf="@id/TxtUserNAme" />
+            app:layout_constraintTop_toBottomOf="@id/TxtUserName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -145,6 +145,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnSettingSupport" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogOutSession"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/redDark"
+            android:background="@color/transparent"
+            android:fontFamily="@font/outfit_regular"
+            android:paddingStart="20dp"
+            android:text="Log Out"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSettingReport"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

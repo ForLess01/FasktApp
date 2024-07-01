@@ -12,7 +12,20 @@
           "package_name": "com.alfontetarqui.fasktapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "678307917636-k4trdk45dgnm429hk7ulgrbvpindg1tt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alfontetarqui.fasktapp",
+            "certificate_hash": "506fb07cdbb03ee73fefaa395691b070a2fe50e4"
+          }
+        },
+        {
+          "client_id": "678307917636-9tqilgfaqmkkp8uaknipnqc6pq6anh6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAmu24wKD_vE2J0sNqdHUDnbqbxXI1PfKY"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678307917636-9tqilgfaqmkkp8uaknipnqc6pq6anh6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

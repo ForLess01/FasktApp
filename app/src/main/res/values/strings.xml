@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">FaskT</string>
+    <string name="prefs_files">com.alfontetarqui.fasktapp.PREFERENCE_FILE_KEY</string>
     <string name="welcome">"Welcome !"</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -7,10 +8,12 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="Register">"Register"</string>
+    <string name="Validation">"Validation"</string>
     <string name="NameUser">"Name"</string>
     <string name="AgeUser">"Age"</string>
     <string name="AcademicGroup">"Academic"</string>
     <string name="UserNameMe">"Rendo Alfonte"</string>
+    <string name="codeValidation">"code"</string>
     <string name="FitGroup">"Fit"</string>
     <string name="EatGroup">"Eat"</string>
     <string name="Individual">"Individual"</string>
@@ -22,6 +25,7 @@
     <string name="ONLINEStatus">"ONLINE"</string>
     <string name="OFFLINEStatus">"OFFLINE"</string>
     <string name="loading">"Please Wait"</string>
+    <string name="TypeLogin">"%TipodeLogeo%"</string>
     <string name="nameLogo">"Logo de la App Faskt"</string>
     <string name="Status">"Status:"</string>
     <string name="FocusOn">"Focus on"</string>
