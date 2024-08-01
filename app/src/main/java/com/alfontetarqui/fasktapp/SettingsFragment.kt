@@ -12,8 +12,8 @@ import com.alfontetarqui.fasktapp.databinding.FragmentSettingsBinding
 import com.google.firebase.auth.FirebaseAuth
 
 enum class ProviderType {
-    BASIC,
-    GOOGLE
+   BASIC,
+   GOOGLE
 }
 
 class SettingsFragment : Fragment() {
@@ -86,7 +86,13 @@ class SettingsFragment : Fragment() {
     private fun btnLogOutSession() {
         binding.btnLogOutSession.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
-            val intent = Intent(requireContext(), LoginON_Activity::class.java)
+            val intent = Intent(requireContext(), RegisterOrLogInON_Activity::class.java)
+            val prefs = requireContext().getSharedPreferences(
+                getString(R.string.prefs_files),
+                Context.MODE_PRIVATE
+            ).edit()
+            prefs.clear()
+            prefs.apply()
             startActivity(intent)
         }
     }
