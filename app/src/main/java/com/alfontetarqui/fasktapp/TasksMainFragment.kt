@@ -30,7 +30,7 @@ class TasksMainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.BtnAddTask.setOnClickListener { launchNewFragment() }
-        binding.TimerClockForMains.setOnClickListener { launchNewFragment2() }
+
     }
 
     private fun launchNewFragment() {
@@ -38,16 +38,7 @@ class TasksMainFragment : Fragment() {
 
         // Realizar la transacción del fragmento
         parentFragmentManager.commit {
-            replace(R.id.nav_host_fragment_container, newFragment) // Asegúrate de que nav_host_fragment_container es el ID correcto del contenedor del fragmento
-            addToBackStack(null) // Opcional: agrega esta transacción a la pila hacia atrás para que el usuario pueda volver con el botón de retroceso
-        }
-    }
-    private fun launchNewFragment2() {
-        val newFragment = PMainTimerMenuSessionTimerConfirmEndFragment() // Crear una instancia del nuevo fragmento
-
-        // Realizar la transacción del fragmento
-        parentFragmentManager.commit {
-            replace(R.id.nav_host_fragment_container, newFragment) // Asegúrate de que nav_host_fragment_container es el ID correcto del contenedor del fragmento
+            replace(R.id.nav_host_fragment_container, newFragment)
             addToBackStack(null) // Opcional: agrega esta transacción a la pila hacia atrás para que el usuario pueda volver con el botón de retroceso
         }
     }

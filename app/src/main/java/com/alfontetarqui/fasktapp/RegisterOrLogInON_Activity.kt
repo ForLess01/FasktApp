@@ -21,8 +21,14 @@ class RegisterOrLogInON_Activity : AppCompatActivity() {
         setContentView(binding.root)
         binding.btnregisterON.setOnClickListener {registerONLINE()}
         binding.TxtBtnLogIn.setOnClickListener {LoginWithEmail()}
+        binding.btnConnectGoogle.setOnClickListener {LoginWithGoogle()}
     }
 
+    private fun LoginWithGoogle(){
+        val intent = Intent(this@RegisterOrLogInON_Activity,WelcomeOFF_Activity::class.java)
+        startActivity(intent)
+        finish()
+    }
     private fun registerONLINE(){
         val intent = Intent(this@RegisterOrLogInON_Activity,Register_ON_Activity::class.java)
         startActivity(intent)

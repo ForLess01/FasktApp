@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".NotesMainFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,16 +27,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/TimerClockForMains"
-            android:layout_width="100dp"
-            android:layout_height="35dp"
-            android:background="@drawable/rounded_rectangle_fillwhiteapp"
-            android:fontFamily="@font/outfit_regular"
-            android:text="@string/hr01"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/GroupsInNotes"
@@ -44,6 +35,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginHorizontal="20dp"
         >
+
         <TextView
             android:id="@+id/Sub1TitleNotes"
             android:layout_width="wrap_content"
@@ -227,92 +219,57 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/FreeInNotes"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="350dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-
+        android:layout_marginTop="350dp"
+        android:layout_marginBottom="10dp"
         >
+
         <TextView
             android:id="@+id/Sub1TitleNotesFree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="Free"
             android:fontFamily="@font/outfit_regular"
-            android:textSize="20sp"
+            android:text="Free"
             android:textColor="@color/grayDark"
-            />
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNotes"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Sub1TitleNotesFree">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/VisibleMainTaskView1"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="PLEASE TOUCH THIS BUTTON TO TRY TO TYPE"
-                android:textAllCaps="false"
-                android:textAlignment="textStart"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:background="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/VisibleMainTaskView2"
-                android:fontFamily="@font/outfit_regular"
-                />
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/VisibleMainTaskView2"
-                android:layout_width="match_parent"
-                android:layout_marginTop="4dp"
-                android:layout_height="40dp"
-                android:text="I need find some lorem"
-                android:textAllCaps="false"
-                android:textAlignment="textStart"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/VisibleMainTaskView1"
-                android:fontFamily="@font/outfit_regular"
-                />
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/VisibleMainTaskView3"
-                android:layout_width="match_parent"
-                android:layout_marginTop="4dp"
-                android:layout_height="40dp"
-                android:text="I need find some lorem"
-                android:textAllCaps="false"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:textAlignment="textStart"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/VisibleMainTaskView2"
-                android:fontFamily="@font/outfit_regular"
-                />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/VisibleMainTaskView4"
-                android:layout_width="match_parent"
-                android:layout_marginTop="4dp"
-                android:layout_height="40dp"
-                android:text="I need find some lorem"
-                android:textAllCaps="false"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:textAlignment="textStart"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/VisibleMainTaskView3"
-                android:fontFamily="@font/outfit_regular"
-                />
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="115mm">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/BtnAddFreeNote"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_rectangle_fillwhiteapp"
+            android:fontFamily="@font/outfit_regular"
+            android:src="@drawable/plus_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </FrameLayout>

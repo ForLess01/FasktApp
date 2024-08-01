@@ -5,15 +5,11 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.alfontetarqui.fasktapp.databinding.ActivityLoginOnBinding
 import com.google.firebase.auth.FirebaseAuth
 
-enum class ProviderType{
-    BASIC
-}
 class LoginON_Activity : AppCompatActivity() {
+
     private lateinit var binding: ActivityLoginOnBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,27 +20,29 @@ class LoginON_Activity : AppCompatActivity() {
 
         setup()
     }
+
     private fun setup() {
         binding.btnLogInOFFLINE.setOnClickListener {
             if (binding.UserRegisterEmailBoxTxt.text.isNotEmpty() &&
-                binding.UserRegisterPasswordBoxTxt.text.isNotEmpty()){
+                binding.UserRegisterPasswordBoxTxt.text.isNotEmpty()) {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(
                     binding.UserRegisterEmailBoxTxt.text.toString(),
-                    binding.UserRegisterPasswordBoxTxt.text.toString()).addOnCompleteListener{
-                    if(it.isSuccessful){
-                        GoLogin()
-                    }else{
+                    binding.UserRegisterPasswordBoxTxt.text.toString()).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        val email = binding.UserRegisterEmailBoxTxt.text.toString()
+                        val provider = "Email"  // Cambia esto al provider correspondiente
+                        GoLogin(email, provider)
+                    } else {
                         AlertErrorAutentication()
                     }
                 }
-            }
-            else{
+            } else {
                 EmptyRegisterCamps()
             }
         }
-
     }
-    private fun AlertErrorAutentication(){
+
+    private fun AlertErrorAutentication() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
         builder.setMessage("Error al autenticar al usuario")
@@ -52,12 +50,16 @@ class LoginON_Activity : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
     }
-    //email: String, providerType: ProviderType
-    private fun GoLogin(){
-        val intent = Intent(this,WelcomeOFF_Activity::class.java).apply {}
+
+    private fun GoLogin(email: String, provider: String) {
+        val intent = Intent(this, WelcomeOFF_Activity::class.java).apply {
+            putExtra("email", email)
+            putExtra("provider", provider)
+        }
         startActivity(intent)
     }
-    private fun EmptyRegisterCamps(){
+
+    private fun EmptyRegisterCamps() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Inicio de Sesión Fallido")
         builder.setMessage("Rellene los campos")

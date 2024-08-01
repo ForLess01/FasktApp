@@ -7,7 +7,6 @@ import android.net.NetworkCapabilities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.alfontetarqui.fasktapp.databinding.ActivityMainBinding
 import com.alfontetarqui.fasktapp.databinding.ActivityWelcomeOffBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -19,20 +18,29 @@ class WelcomeOFF_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-    binding = ActivityWelcomeOffBinding.inflate(layoutInflater)
-    setContentView(binding.root)
+        binding = ActivityWelcomeOffBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Verifica la conexión a Internet
+        checkInternetConnection()
+
+        // Lanza la siguiente actividad después de 3 segundos
         lifecycleScope.launch {
-            // Esperar 4 segundos
             delay(3000)
-            // Crear el Intent para la ActivityB
-            val intent = Intent(this@WelcomeOFF_Activity, TimeLine_Main_Activity::class.java)
-            // Iniciar la ActivityB
+            // Recupera el email y el provider del Intent
+            val email = intent.getStringExtra("email") ?: ""
+            val provider = intent.getStringExtra("provider") ?: ""
+
+            // Crear el Intent para TimeLine_Main_Activity y pasar los datos
+            val intent = Intent(this@WelcomeOFF_Activity, TimeLine_Main_Activity::class.java).apply {
+                putExtra("email", email)
+                putExtra("provider", provider)
+            }
             startActivity(intent)
-            // Finalizar la ActivityA (opcional)
             finish()
         }
-        checkInternetConnection()
     }
+
     private fun checkInternetConnection() {
         val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val network = connectivityManager.activeNetwork

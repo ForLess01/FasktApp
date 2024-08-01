@@ -81,17 +81,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
         android:layout_height="550dp"
-        android:layout_marginTop="170dp"
-        >
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="170dp">
 
         <EditText
             android:id="@+id/noteEditText"
             android:layout_width="0dp"
-            android:layout_height="450dp"
+            android:layout_height="match_parent"
             android:autofillHints="Write your"
             android:background="@drawable/rounded_rectangle_fillwhiteapp"
             android:fontFamily="@font/patrick_hand_regular"
@@ -101,6 +101,7 @@
             android:padding="10dp"
             android:scrollbars="vertical"
             android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"

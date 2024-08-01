@@ -44,6 +44,7 @@
     <string name="title_Notes">Notes</string>
     <string name="timeline_for_main">TimeLine  :</string>
     <string name="week_timeline">Week</string>
+    <string name="prefs_file">com.alfontetarqui.fasktapp.PREFERENCE_FILE_KEY</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Monday">Monday</string>

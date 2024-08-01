@@ -27,24 +27,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/TimerClockForMains"
-            android:hint="@string/hr01"
-            android:fontFamily="@font/outfit_regular"
-            android:layout_width="100dp"
-            android:layout_height="35dp"
-            android:background="@drawable/rounded_rectangle_fillwhiteapp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="510dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="369dp"
+        android:layout_height="513dp"
         android:layout_marginHorizontal="20dp"
-        >
+        android:layout_marginTop="100dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/TasksForMonday"
@@ -52,27 +41,28 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <TextView
                 android:id="@+id/TitleTasksMonday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Monday"
                 android:fontFamily="@font/outfit_regular"
+                android:text="@string/Monday"
                 android:textSize="15sp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/BtnActivityTask"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:text="Activity 01"
+                android:paddingStart="15dp"
+                android:textAlignment="textStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/TitleTasksMonday"
-                android:hint="Activity 01"
-                android:textAlignment="textStart"
-                android:paddingStart="15dp"/>
+                app:layout_constraintTop_toBottomOf="@id/TitleTasksMonday" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -81,28 +71,27 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/TasksForMonday">
+
             <TextView
                 android:id="@+id/TitleTasksTuesday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Tuesday"
                 android:fontFamily="@font/outfit_regular"
+                android:text="@string/Tuesday"
                 android:textSize="15sp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:hint="Activity 01"
+                android:paddingStart="15dp"
+                android:textAlignment="textStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/TitleTasksTuesday"
-                android:hint="Activity 01"
-                android:textAlignment="textStart"
-                android:paddingStart="15dp"
-                />
+                app:layout_constraintTop_toBottomOf="@id/TitleTasksTuesday" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -111,28 +100,27 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/TasksForTuesday">
+
             <TextView
                 android:id="@+id/TitleTasksWednesday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Wednesday"
                 android:fontFamily="@font/outfit_regular"
+                android:text="@string/Wednesday"
                 android:textSize="15sp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:hint="Activity 01"
+                android:paddingStart="15dp"
+                android:textAlignment="textStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/TitleTasksWednesday"
-                android:hint="Activity 01"
-                android:textAlignment="textStart"
-                android:paddingStart="15dp"
-                />
+                app:layout_constraintTop_toBottomOf="@id/TitleTasksWednesday" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -141,28 +129,27 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/TasksForWednesday">
+
             <TextView
                 android:id="@+id/TitleTasksThursday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Thursday"
                 android:fontFamily="@font/outfit_regular"
+                android:text="@string/Thursday"
                 android:textSize="15sp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:hint="Activity 01"
+                android:paddingStart="15dp"
+                android:textAlignment="textStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/TitleTasksThursday"
-                android:hint="Activity 01"
-                android:textAlignment="textStart"
-                android:paddingStart="15dp"
-                />
+                app:layout_constraintTop_toBottomOf="@id/TitleTasksThursday" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -171,28 +158,27 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/TasksForThursday">
+
             <TextView
                 android:id="@+id/TitleTasksFriday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Monday"
                 android:fontFamily="@font/outfit_regular"
+                android:text="@string/Monday"
                 android:textSize="15sp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:hint="Activity 01"
+                android:paddingStart="15dp"
+                android:textAlignment="textStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/TitleTasksFriday"
-                android:hint="Activity 01"
-                android:textAlignment="textStart"
-                android:paddingStart="15dp"
-                />
+                app:layout_constraintTop_toBottomOf="@id/TitleTasksFriday" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -201,28 +187,27 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/TasksForFriday">
+
             <TextView
                 android:id="@+id/TitleTasksSaturday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Saturday"
                 android:fontFamily="@font/outfit_regular"
+                android:text="@string/Saturday"
                 android:textSize="15sp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:hint="Activity 01"
+                android:paddingStart="15dp"
+                android:textAlignment="textStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/TitleTasksSaturday"
-                android:hint="Activity 01"
-                android:textAlignment="textStart"
-                android:paddingStart="15dp"
-                />
+                app:layout_constraintTop_toBottomOf="@id/TitleTasksSaturday" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -231,39 +216,38 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/TasksForSaturday">
+
             <TextView
                 android:id="@+id/TitleTasksSunday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Sunday"
                 android:fontFamily="@font/outfit_regular"
+                android:text="@string/Sunday"
                 android:textSize="15sp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@drawable/rounded_rectangle_fillwhiteapp"
+                android:hint="Activity 01"
+                android:paddingStart="15dp"
+                android:textAlignment="textStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/TitleTasksSunday"
-                android:hint="Activity 01"
-                android:textAlignment="textStart"
-                android:paddingStart="15dp"
-                />
+                app:layout_constraintTop_toBottomOf="@id/TitleTasksSunday" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-        
-        <androidx.appcompat.widget.AppCompatImageButton
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/BtnAddTask"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="@drawable/rounded_rectangle_fillwhiteapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:src="@drawable/plus_small"
-            />
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
