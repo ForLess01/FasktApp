@@ -1,16 +1,15 @@
 package com.alfontetarqui.fasktapp.adapter
 
-import android.view.View
-import android.widget.TextView
+import android.text.Editable
 import androidx.recyclerview.widget.RecyclerView
-import com.alfontetarqui.fasktapp.R
-import com.alfontetarqui.fasktapp.models.FreeNote
+import com.alfontetarqui.fasktapp.databinding.ItemFreenoteBinding
+import com.alfontetarqui.fasktapp.models.FreeNoteModel
 
-class FreeNotesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class FreeNotesViewHolder(private val binding: ItemFreenoteBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    val FreeNote = view.findViewById<TextView>(R.id.ItemBtnFreeNote)
-
-    fun render(freeNoteModel: FreeNote) {
-        FreeNote.text = freeNoteModel.title
+    fun render(freeNoteModel: FreeNoteModel) {
+        binding.ItemBtnFreeNote.text = Editable.Factory.getInstance().newEditable(freeNoteModel.title)
+        binding.textDate.text = freeNoteModel.date
     }
 }
+
