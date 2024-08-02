@@ -1,59 +1,92 @@
 package com.alfontetarqui.fasktapp
 
+import android.app.AlertDialog
+import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.commit
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.alfontetarqui.fasktapp.adapter.GroupNotesAdapter
+import com.alfontetarqui.fasktapp.databinding.FragmentPMainNotesInGroupBinding
+import com.alfontetarqui.fasktapp.models.GroupNoteModel
+import com.alfontetarqui.fasktapp.models.GroupNotesProvider
+import com.alfontetarqui.fasktapp.ui.titleGroupNoteFragment
+import com.google.firebase.firestore.FirebaseFirestore
+import java.util.Date
+import java.util.Locale
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [PMainNotesInGroupFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class PMainNotesInGroupFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private val DB = FirebaseFirestore.getInstance()
+    private var _binding: FragmentPMainNotesInGroupBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var adapter: GroupNotesAdapter
+    private var groupNoteMutableList: MutableList<GroupNoteModel> = GroupNotesProvider.groupNotesListModels
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_p_main_notes_in_group, container, false)
+        _binding = FragmentPMainNotesInGroupBinding.inflate(inflater, container, false)
+        initRecyclerView()
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PMainNotesInGroupFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            PMainNotesInGroupFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //binding.VisibleMainTaskView1.setOnClickListener { launchNewFragment() }
+        val email = arguments?.getString("email") ?: ""
+        val provider = arguments?.getString("provider") ?: ""
+        //binding.appCompatButton1.setOnClickListener { launchNewFragment2() }
+        binding.BtnAddGroupNote.setOnClickListener{BtnAddGroupNote()}
     }
+
+    private fun BtnAddGroupNote() {
+        val addGroupNoteFragment = titleGroupNoteFragment { title ->
+            val currentDate = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault()).format(Date())
+            val newNote = GroupNoteModel(title.toString(), currentDate)
+            adapter.addGroupNoteModel(newNote)
+        }
+        parentFragmentManager.commit {
+            replace(R.id.nav_host_fragment_container, addGroupNoteFragment)
+            addToBackStack(null)
+        }
+    }
+
+    private fun initRecyclerView() {
+        adapter = GroupNotesAdapter(groupNoteMutableList, ::onItemClick, ::onItemLongClick)
+        val recyclerView = binding.recyclerViewNotesGroups
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = adapter
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+    private fun onItemClick(groupNoteModel: GroupNoteModel) {
+        val fragment = NotesFragment.newInstance(groupNoteModel.title)
+        parentFragmentManager.commit {
+            replace(R.id.nav_host_fragment_container, fragment)
+            addToBackStack(null)
+        }
+    }
+    private fun onItemLongClick(groupNoteModel: GroupNoteModel, position: Int) {
+        AlertDialog.Builder(requireContext())
+            .setMessage("Desea eliminar la GroupNote?")
+            .setPositiveButton("Si") { _, _ ->
+                groupNoteMutableList.removeAt(position)
+                binding.recyclerViewNotesGroups.adapter?.notifyItemRemoved(position)
+                Toast.makeText(requireContext(), "GroupNote eliminada", Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("No") { dialog, _ -> dialog.dismiss() }
+            .create()
+            .show()
+    }
+
 }
