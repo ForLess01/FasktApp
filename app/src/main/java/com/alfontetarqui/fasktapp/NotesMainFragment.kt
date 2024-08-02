@@ -1,11 +1,13 @@
 package com.alfontetarqui.fasktapp
 
+import android.app.AlertDialog
 import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.commit
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alfontetarqui.fasktapp.adapter.FreeNotesAdapter
@@ -14,7 +16,6 @@ import com.alfontetarqui.fasktapp.models.FreeNoteModel
 import com.alfontetarqui.fasktapp.models.FreeNotesProvider
 import com.alfontetarqui.fasktapp.ui.titleFreeNoteFragment
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.type.Date
 import java.util.Locale
 
 class NotesMainFragment : Fragment() {
@@ -79,7 +80,7 @@ class NotesMainFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        adapter = FreeNotesAdapter(freeNoteMutableList)
+        adapter = FreeNotesAdapter(freeNoteMutableList, ::onItemClick, ::onItemLongClick)
         val recyclerView = binding.recyclerViewNotes
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = adapter
@@ -88,5 +89,25 @@ class NotesMainFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    private fun onItemClick(freeNoteModel: FreeNoteModel) {
+        val fragment = PMainNotesPaperFreeFragment.newInstance(freeNoteModel.title)
+        parentFragmentManager.commit {
+            replace(R.id.nav_host_fragment_container, fragment)
+            addToBackStack(null)
+        }
+    }
+
+    private fun onItemLongClick(freeNoteModel: FreeNoteModel, position: Int) {
+        AlertDialog.Builder(requireContext())
+            .setMessage("Desea eliminar la FreeNote?")
+            .setPositiveButton("Si") { _, _ ->
+                freeNoteMutableList.removeAt(position)
+                binding.recyclerViewNotes.adapter?.notifyItemRemoved(position)
+                Toast.makeText(requireContext(), "FreeNote eliminada", Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("No") { dialog, _ -> dialog.dismiss() }
+            .create()
+            .show()
     }
 }

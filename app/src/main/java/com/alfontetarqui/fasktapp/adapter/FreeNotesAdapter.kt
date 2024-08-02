@@ -6,11 +6,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.alfontetarqui.fasktapp.databinding.ItemFreenoteBinding
 import com.alfontetarqui.fasktapp.models.FreeNoteModel
 
-class FreeNotesAdapter(private val freeNotesListModel: MutableList<FreeNoteModel>) : RecyclerView.Adapter<FreeNotesViewHolder>() {
+class FreeNotesAdapter(
+    private val freeNotesListModel: MutableList<FreeNoteModel>,
+    private val onItemClick: (FreeNoteModel) -> Unit,
+    private val onItemLongClick: (FreeNoteModel, Int) -> Unit
+) : RecyclerView.Adapter<FreeNotesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FreeNotesViewHolder {
         val binding = ItemFreenoteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return FreeNotesViewHolder(binding)
+        return FreeNotesViewHolder(binding, onItemClick, onItemLongClick)
     }
 
     override fun getItemCount(): Int = freeNotesListModel.size
@@ -25,3 +29,4 @@ class FreeNotesAdapter(private val freeNotesListModel: MutableList<FreeNoteModel
         notifyItemInserted(freeNotesListModel.size - 1)
     }
 }
+
