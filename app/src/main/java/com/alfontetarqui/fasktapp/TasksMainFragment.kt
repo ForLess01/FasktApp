@@ -94,6 +94,7 @@ class TasksMainFragment : Fragment() {
         }
     }
 
+
     private fun onItemLongClick(tasksMainModel: TasksMainModel, position: Int) {
         AlertDialog.Builder(requireContext())
             .setMessage("Do you want to delete this task?")

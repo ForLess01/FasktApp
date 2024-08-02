@@ -52,14 +52,15 @@ class PMainTasksCreateFormFragment : Fragment() {
                 else -> "P?"
             }
             saveTaskToFirestore(titleText, priority)
+            onTaskAdded?.invoke(titleText, priority)
+            onTaskAdded?.invoke(titleText, priority)
+            showToast("Task Added")
+            parentFragmentManager.popBackStack()
         }
     }
 
     private fun saveTaskToFirestore(title: String, priority: String) {
-        val userId = auth.currentUser?.uid ?: run {
-            showToast("Error: Usuario no autenticado")
-            return
-        }
+        val userId = auth.currentUser?.uid ?: return
         val task = hashMapOf(
             "title" to title,
             "priority" to priority
@@ -68,8 +69,6 @@ class PMainTasksCreateFormFragment : Fragment() {
             .add(task)
             .addOnSuccessListener {
                 showToast("Task saved to Firestore")
-                onTaskAdded?.invoke(title, priority)
-                parentFragmentManager.popBackStack()
             }
             .addOnFailureListener { e ->
                 showToast("Error saving task: ${e.message}")
@@ -88,4 +87,3 @@ class PMainTasksCreateFormFragment : Fragment() {
         }
     }
 }
-

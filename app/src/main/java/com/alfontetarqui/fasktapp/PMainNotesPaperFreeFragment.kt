@@ -1,31 +1,28 @@
 package com.alfontetarqui.fasktapp
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.alfontetarqui.fasktapp.databinding.FragmentPMainNotesPaperFreeBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [PMainNotesPaperFreeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class PMainNotesPaperFreeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private var _binding: FragmentPMainNotesPaperFreeBinding? = null
+    private val binding get() = _binding!!
+    private val db = FirebaseFirestore.getInstance()
+    private val auth = FirebaseAuth.getInstance()
+
+    private var noteId: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            noteId = it.getString("noteId")
         }
     }
 
@@ -33,26 +30,79 @@ class PMainNotesPaperFreeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_p_main_notes_paper_free, container, false)
+        _binding = FragmentPMainNotesPaperFreeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.BtnSaveNotes.setOnClickListener { saveNoteContent() }
+
+        // Load the note content if it exists
+        loadNoteContent()
+    }
+
+    private fun loadNoteContent() {
+        val userId = auth.currentUser?.uid ?: return
+        db.collection("users").document(userId).collection("notes").document(noteId ?: return)
+            .get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    val content = document.getString("content") ?: ""
+                    binding.noteEditText.setText(content)
+                }
+            }
+            .addOnFailureListener { e ->
+                showToast("Error loading note: ${e.message}")
+            }
+    }
+
+    private fun saveNoteContent() {
+        val userId = auth.currentUser?.uid
+
+        if (userId == null) {
+            showToast("Usuario no autenticado")
+            return
+        }
+
+        val noteContent = binding.noteEditText.text.toString()
+
+        if (noteContent.isEmpty()) {
+            showToast("El contenido de la nota no puede estar vacío")
+            return
+        }
+
+        val noteData = hashMapOf(
+            "content" to noteContent
+        )
+
+        db.collection("users").document(userId).collection("notes").document(noteId ?: return)
+            .set(noteData)
+            .addOnSuccessListener {
+                showToast("Nota guardada con éxito")
+            }
+            .addOnFailureListener { e ->
+                showToast("Error guardando la nota: ${e.message}")
+            }
+    }
+
+
+    private fun showToast(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PMainNotesPaperFreeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String) =
+        fun newInstance(noteId: String) =
             PMainNotesPaperFreeFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putString("noteId", noteId)
                 }
             }
     }
