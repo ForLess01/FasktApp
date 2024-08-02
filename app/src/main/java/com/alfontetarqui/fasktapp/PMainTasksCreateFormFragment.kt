@@ -7,12 +7,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.alfontetarqui.fasktapp.databinding.FragmentPMainTasksCreateFormBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class PMainTasksCreateFormFragment : Fragment() {
 
     private var onTaskAdded: ((String, String) -> Unit)? = null
     private var _binding: FragmentPMainTasksCreateFormBinding? = null
     private val binding get() = _binding!!
+    private val db = FirebaseFirestore.getInstance()
+    private val auth = FirebaseAuth.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,10 +51,29 @@ class PMainTasksCreateFormFragment : Fragment() {
                 3 -> "P3"
                 else -> "P?"
             }
-            onTaskAdded?.invoke(titleText, priority)
-            showToast("Task Added")
-            parentFragmentManager.popBackStack()
+            saveTaskToFirestore(titleText, priority)
         }
+    }
+
+    private fun saveTaskToFirestore(title: String, priority: String) {
+        val userId = auth.currentUser?.uid ?: run {
+            showToast("Error: Usuario no autenticado")
+            return
+        }
+        val task = hashMapOf(
+            "title" to title,
+            "priority" to priority
+        )
+        db.collection("users").document(userId).collection("tasks")
+            .add(task)
+            .addOnSuccessListener {
+                showToast("Task saved to Firestore")
+                onTaskAdded?.invoke(title, priority)
+                parentFragmentManager.popBackStack()
+            }
+            .addOnFailureListener { e ->
+                showToast("Error saving task: ${e.message}")
+            }
     }
 
     private fun showToast(message: String) {
@@ -65,3 +88,4 @@ class PMainTasksCreateFormFragment : Fragment() {
         }
     }
 }
+
